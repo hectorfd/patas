@@ -14,5 +14,7 @@ $patas = new CalculatePatas($animals);
 
 $patas -> sum();
 echo $patas -> print();
+echo '<br>';
+echo $patas -> salidaJson();
 
 ?>

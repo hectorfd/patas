@@ -1,20 +1,20 @@
 <?php
 include 'CalculatePatas.php';
+include 'SalidaJson.php';
 
 $animals = [
     'Gato' => 4,
     'Perro' => 4,
-    'Pájaro' => 2,
-    'oveja' => 4,
+    'Pato' => 2,
+    'Oveja' => 4,
     'Herido de guerra xd' => 1,
-    
 ];
 
 $patas = new CalculatePatas($animals);
+$patas->sum();
 
-$patas -> sum();
-echo $patas -> print();
+echo $patas->print();
 echo '<br>';
-echo $patas -> salidaJson();
+echo SalidaJson::generarJson($animals); 
 
 ?>

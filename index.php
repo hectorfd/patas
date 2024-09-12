@@ -1,18 +1,18 @@
 <?php
-class    CalculatePatas {
-private $sum;
-private $animals;
-public function    __construct($animals = [])
-{
-$this->animals = $animals;
-$this->sum = 0;
-}
-public function    sum()
-{
-$this->sum = array_sum($this->animals);
-}
-public function    print()
-{
-return "Calculo ejecutado \n\n Los animales suman {$this->sum} patas."; }
-}
+include 'CalculatePatas.php';
+
+$animals = [
+    'Gato' => 4,
+    'Perro' => 4,
+    'Pájaro' => 2,
+    'oveja' => 4,
+    'Herido de guerra xd' => 1,
+    
+];
+
+$patas = new CalculatePatas($animals);
+
+$patas -> sum();
+echo $patas -> print();
+
 ?>
